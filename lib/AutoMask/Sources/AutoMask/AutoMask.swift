@@ -1,7 +1,10 @@
 public struct AutoMask {
-    private init() { /* NOT IMPLEMENTED */ }
 
-    public static func apply(into: String, mask: String) -> String {
-        return "apply(into:\(into)mask:\(mask)->String"
+    private init() { /* NOT REACHEABLE */ }
+
+    public static func apply(into subject: String, with mask: String) -> String {
+        var input = subject
+        return input.apply(mask: mask)
     }
+
 }
